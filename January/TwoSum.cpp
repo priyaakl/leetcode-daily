@@ -7,9 +7,9 @@ public:
             int second_integer= target - nums.at(i);
 
             if(hash_table.find(second_integer)!=hash_table.end()){
-                
-                target_indices.push_back(hash_table.find(second_integer)->second);
                 target_indices.push_back(i);
+                target_indices.push_back(hash_table.find(second_integer)->second);
+                
                 break;
             } else {
                 hash_table[nums.at(i) ]= i;
